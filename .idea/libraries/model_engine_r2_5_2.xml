@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="model-engine-r2_5_2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../end/model-engine-r2_5_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

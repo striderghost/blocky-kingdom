@@ -1,0 +1,15 @@
+name: BlockyKingdom
+main: at.jojokobi.blockykingdom.BlockyKingdomPlugin
+version: 0.1
+author: jojokobi
+load: STARTUP
+depend: [JojokobiUtil, JojosGenerator]
+softdepend: []
+api-version: 1.19
+commands:
+  resetstats:
+    description: Resets a players skills
+    usage: /resetstats,
+  opengui:
+    description: Opens players GUI
+    usage: /opengui

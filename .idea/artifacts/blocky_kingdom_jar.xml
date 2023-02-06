@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="blocky-kingdom:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/blocky_kingdom_jar</output-path>
+    <root id="archive" name="blocky-kingdom.jar">
+      <element id="module-output" name="blocky-kingdom" />
+    </root>
+  </artifact>
+</component>
