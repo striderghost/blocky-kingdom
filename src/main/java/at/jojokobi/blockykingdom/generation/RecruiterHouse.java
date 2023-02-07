@@ -32,7 +32,7 @@ public class RecruiterHouse extends Structure{
 	public RecruiterHouse(EntityHandler entityHandler) {
 		super(10, 10, 6, 0);
 		this.entityHandler = entityHandler;
-		building = Building.loadBuilding(getClass().getResourceAsStream("/building/recruiter_house.yml"));
+		building = Building.loadBuilding(getClass().getResourceAsStream("/buildings/recruiter_house.yml"));
 		
 		loot = new LootInventory();
 		
