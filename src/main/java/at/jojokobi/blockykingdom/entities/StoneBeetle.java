@@ -33,9 +33,9 @@ public class StoneBeetle extends CustomEntity<ArmorStand>{
 	private static final LootInventory LOOT = new LootInventory();
 	
 	static {
-		LOOT.addItem(new LootItem(1, new ItemStack(Material.COBBLESTONE), 1, 3));
-		LOOT.addItem(new LootItem(0.5, new ItemStack(Material.COBBLESTONE), 1, 2));
-		LOOT.addItem(new LootItem(0.2, new ItemStack(Material.REDSTONE), 1, 1));
+		LOOT.addItem(new LootItem(0.1, new ItemStack(Material.COBBLESTONE), 1, 3));
+		LOOT.addItem(new LootItem(0.1, new ItemStack(Material.COBBLESTONE), 1, 2));
+		LOOT.addItem(new LootItem(0.02, new ItemStack(Material.REDSTONE), 1, 1));
 	}
 	
 	public StoneBeetle(Location place, EntityHandler handler) {

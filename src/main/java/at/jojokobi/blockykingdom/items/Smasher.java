@@ -13,6 +13,8 @@ import at.jojokobi.blockykingdom.BlockyKingdomPlugin;
 import at.jojokobi.mcutil.item.CustomTool;
 import at.jojokobi.mcutil.item.ItemHandler;
 
+import java.util.Random;
+
 public class Smasher extends CustomTool{
 
 	private BlockyKingdomPlugin plugin;

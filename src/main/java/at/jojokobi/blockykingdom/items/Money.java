@@ -39,7 +39,7 @@ public class Money extends CustomItem{
 	public boolean onUse(ItemStack item, Player player) {
 		Statable statable = StatHandler.getInstance().getStats(player);
 		if (statable != null) {
-			statable.getCharacterStats().setMoney(statable.getCharacterStats().getMoney() + 100);
+			statable.getCharacterStats().setMoney(statable.getCharacterStats().getMoney() + 10);
 			item.setAmount(item.getAmount() - 1);
 		}
 		return true;

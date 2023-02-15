@@ -59,7 +59,7 @@ public class ExecutionersScythe extends CustomTool{
 		}
 		
 		if (event.getEntity() instanceof Damageable) {
-			if (Math.round(((Damageable) event.getEntity()).getHealth() - event.getFinalDamage()) <= 0.5 && Math.random() < 0.2) {
+			if (Math.round(((Damageable) event.getEntity()).getHealth() - event.getFinalDamage()) <= 0.5 && Math.random() < 0.005) {
 				ItemStack skull = null;
 				if (event.getEntity() instanceof Zombie) {
 					skull = new ItemStack(Material.ZOMBIE_HEAD);

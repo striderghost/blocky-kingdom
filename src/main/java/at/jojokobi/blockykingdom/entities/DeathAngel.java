@@ -54,15 +54,15 @@ public class DeathAngel extends CustomEntity<Stray> implements Attacker, Targete
 	public DeathAngel(Location place, EntityHandler handler) {
 		super(place, handler, null);
 		setDespawnTicks(2500);
-		loot.addItem(new LootItem(1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, CloudParticle.IDENTIFIER), 1, 3));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, CloudParticle.IDENTIFIER), 1, 3));
 		loot.addItem(new LootItem(0.05, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Cloud.IDENTIFIER), 1, 1));
-		loot.addItem(new LootItem(1, new ItemStack(Material.ARROW), 1, 3));
-		loot.addItem(new LootItem(1, new ItemStack(Material.BONE), 1, 3));
+		loot.addItem(new LootItem(0.5, new ItemStack(Material.ARROW), 1, 3));
+		loot.addItem(new LootItem(0.5, new ItemStack(Material.BONE), 1, 3));
 		loot.addItem(new LootItem(0.25, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Money.IDENTIFIER), 1, 1));
 
 		addComponent(new HealthComponent(new RealHealthAccessor()));
 		addComponent(new LootComponent(loot, 10));
-		
+
 		addEntityTask(new AttackTask(entity -> entity instanceof Player || entity instanceof Villager || entity instanceof IronGolem));
 		addEntityTask(new RandomTask());
 	}
@@ -105,7 +105,8 @@ public class DeathAngel extends CustomEntity<Stray> implements Attacker, Targete
 		stray.getEquipment().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
 		stray.getEquipment().setChestplateDropChance(0.0f);
 		stray.setLootTable(null);
-		
+		stray.getEquipment().setItemInMainHandDropChance(0.1f);
+		stray.getEquipment().setItemInOffHandDropChance(0.1f);
 		NMSEntityUtil.clearGoals(stray);
 		
 		return stray;

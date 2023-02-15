@@ -49,23 +49,23 @@ public class MonsterUpgradeHandler implements Listener {
 		super();
 		this.handler = handler;
 		
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Katana.class), 1, 1), 1, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Katana.class), 1, 1).setEnchant(true), 3, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Smasher.class), 1, 1), 3, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Katana.class), 1, 1).setEnchant(true), 4, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(MagicTorch.class), 1, 1), 4, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Hammer.class), 1, 1), 5, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Hammer.class), 1, 1), 6, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(DiamondKatana.class), 1, 1), 7, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(DiamondKatana.class), 1, 1).setEnchant(true), 8, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Katana.class), 1, 1), 1, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Katana.class), 1, 1).setEnchant(true), 3, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Smasher.class), 1, 1), 3, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Katana.class), 1, 1).setEnchant(true), 4, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(MagicTorch.class), 1, 1), 4, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Hammer.class), 1, 1), 5, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(Hammer.class), 1, 1), 6, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(DiamondKatana.class), 1, 1), 7, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(DiamondKatana.class), 1, 1).setEnchant(true), 8, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
 
 		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Money.class), 1, 8), 2, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
 		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Money.class), 1, 8), 4, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
 		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Money.class), 1, 8), 6, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
 		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(Money.class), 1, 8), 8, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class)));
 
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(DoubleBow.class), 1, 1), 5, Arrays.asList(Skeleton.class, Stray.class)));
-		upgrades.add(new MonsterItemUpgrade(new LootItem(1, ItemHandler.getItemStack(DoubleBow.class), 1, 1).setEnchant(true), 7, Arrays.asList(Skeleton.class, Stray.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(DoubleBow.class), 1, 1), 5, Arrays.asList(Skeleton.class, Stray.class)));
+		upgrades.add(new MonsterItemUpgrade(new LootItem(0.1, ItemHandler.getItemStack(DoubleBow.class), 1, 1).setEnchant(true), 7, Arrays.asList(Skeleton.class, Stray.class)));
 		
 		
 		upgrades.add(new MonsterPotionUpgrade(PotionEffectType.FIRE_RESISTANCE, 1, 3, Arrays.asList(Zombie.class, Husk.class, ZombieVillager.class, Drowned.class, Skeleton.class, Stray.class, Spider.class, CaveSpider.class)));

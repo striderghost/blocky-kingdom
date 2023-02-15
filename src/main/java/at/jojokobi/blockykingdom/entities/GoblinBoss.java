@@ -53,8 +53,8 @@ public class GoblinBoss extends CustomEntity<Zombie> implements Attacker {
 		super(place, handler, null);
 		addComponent(new HealthComponent(new RealHealthAccessor()));
 		addComponent(new BossBarComponent("Goblin Boss", BarColor.GREEN, BarStyle.SEGMENTED_10));
-		loot.addItem(new LootItem(1, new ItemStack(Material.EMERALD), 1, 5));
-		loot.addItem(new LootItem(1, ItemHandler.getItemStack(Money.class), 10, 20));
+		loot.addItem(new LootItem(0.1, new ItemStack(Material.EMERALD), 1, 5));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(Money.class), 10, 20));
 		
 		addComponent(new LootComponent(loot, 200));
 		addEntityTask(new AttackTask(Player.class));
@@ -82,7 +82,8 @@ public class GoblinBoss extends CustomEntity<Zombie> implements Attacker {
 		helmet.setItemMeta(meta);
 		entity.getEquipment().setHelmet(helmet);
 		entity.getEquipment().setHelmetDropChance(0);
-		entity.getEquipment().setItemInMainHandDropChance(1);
+		entity.getEquipment().setItemInMainHandDropChance(0.1f);
+		entity.getEquipment().setItemInOffHandDropChance(0.1f);
 		//entity.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
 		//goblibossnentity = ModelEngineAPI.api.getModelManager().createModeledEntity(entity);
 		//goblibossnmodel = ModelEngineAPI.api.getModelManager().createActiveModel("goblinking");

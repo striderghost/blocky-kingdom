@@ -87,7 +87,7 @@ public class Goblin extends CustomEntity<Zombie> implements Attacker{
 
 
 		NMSEntityUtil.clearGoals(entity);
-		entity.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(8.0);
+		entity.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(18.0);
 		entity.setHealth(entity.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 		entity.setRemoveWhenFarAway(true);
 
@@ -115,7 +115,8 @@ public class Goblin extends CustomEntity<Zombie> implements Attacker{
 		entity.getEquipment().setLeggings(leggings);
 		entity.getEquipment().setLeggingsDropChance(0);
 */
-		entity.getEquipment().setItemInMainHandDropChance(1);
+		entity.getEquipment().setItemInMainHandDropChance(0.1f);
+		entity.getEquipment().setItemInOffHandDropChance(0.1f);
 		//entity.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
 		entity.setLootTable(null);
 		//entity.setCustomName("Goblin");

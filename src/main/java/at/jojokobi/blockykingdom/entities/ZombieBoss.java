@@ -55,10 +55,10 @@ public class ZombieBoss extends CustomEntity<Zombie> implements Attacker, Target
 //		setAi(ZombieBossAI.getInstance());
 		LootInventory loot = new LootInventory();
 		
-		loot.addItem(new LootItem(1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, ExecutionersScythe.IDENTIFIER), 1, 1));
-		loot.addItem(new LootItem(1, new ItemStack(Material.ROTTEN_FLESH), 1, 3));
-		loot.addItem(new LootItem(1, new ItemStack(Material.IRON_INGOT), 1, 32));
-		loot.addItem(new LootItem(1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Money.IDENTIFIER), 5, 15));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, ExecutionersScythe.IDENTIFIER), 1, 1));
+		loot.addItem(new LootItem(0.1, new ItemStack(Material.ROTTEN_FLESH), 1, 1));
+		loot.addItem(new LootItem(0.1, new ItemStack(Material.IRON_INGOT), 1, 3));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Money.IDENTIFIER), 1, 15));
 		addComponent(new LootComponent(loot, 200));
 		addComponent(new HealthComponent(new RealHealthAccessor()));
 		addComponent(new BossBarComponent("Zombie Boss", BarColor.RED, BarStyle.SEGMENTED_10));
@@ -91,6 +91,8 @@ public class ZombieBoss extends CustomEntity<Zombie> implements Attacker, Target
 		
 		zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(150.0);
 		zombie.setHealth(zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
+		zombie.getEquipment().setItemInMainHandDropChance(0.1f);
+		zombie.getEquipment().setItemInOffHandDropChance(0.1f);
 		zombie.setRemoveWhenFarAway(false);
 		//zombie.setCustomName("Zombie Boss");
 		

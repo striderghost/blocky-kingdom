@@ -30,7 +30,7 @@ public class Hammer extends CustomTool{
 		setName(NAME);
 		setMeta(META);
 		setMaterial(ITEM);
-		setDamage(7);
+		setDamage(5);
 		setSpeed(-3.1);
 		setMaxDurability(372);
 		setRepairMaterial(Material.IRON_INGOT);

@@ -44,11 +44,11 @@ public class Ghost extends CustomEntity<Skeleton> implements Attacker{
 		
 		LootInventory loot = new LootInventory();
 		loot.addItem(new LootItem(0.25, new ItemStack(Material.BONE), 1, 2));
-		loot.addItem(new LootItem(0.02, new ItemStack(Material.CHAINMAIL_HELMET), 1, 1));
-		loot.addItem(new LootItem(0.02, new ItemStack(Material.CHAINMAIL_CHESTPLATE), 1, 1));
-		loot.addItem(new LootItem(0.02, new ItemStack(Material.CHAINMAIL_LEGGINGS), 1, 1));
-		loot.addItem(new LootItem(0.02, new ItemStack(Material.CHAINMAIL_BOOTS), 1, 1));
-		loot.addItem(new LootItem(0.05, new ItemStack(Material.ENDER_PEARL), 1, 1));
+		loot.addItem(new LootItem(0.01, new ItemStack(Material.CHAINMAIL_HELMET), 1, 1));
+		loot.addItem(new LootItem(0.01, new ItemStack(Material.CHAINMAIL_CHESTPLATE), 1, 1));
+		loot.addItem(new LootItem(0.01, new ItemStack(Material.CHAINMAIL_LEGGINGS), 1, 1));
+		loot.addItem(new LootItem(0.01, new ItemStack(Material.CHAINMAIL_BOOTS), 1, 1));
+		loot.addItem(new LootItem(0.01, new ItemStack(Material.ENDER_PEARL), 1, 1));
 		
 		addComponent(new HealthComponent(new RealHealthAccessor()));
 		addComponent(new LootComponent(loot, 5));
@@ -69,7 +69,8 @@ public class Ghost extends CustomEntity<Skeleton> implements Attacker{
 		entity.getEquipment().setChestplate(new ItemStack(Material.CHAINMAIL_CHESTPLATE));
 		entity.getEquipment().setLeggings(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		entity.getEquipment().setItemInMainHand(null);
-		
+		entity.getEquipment().setItemInMainHandDropChance(0.1f);
+		entity.getEquipment().setItemInOffHandDropChance(0.1f);
 		//entity.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
 		entity.setLootTable(null);
 		//ghostentity = ModelEngineAPI.api.getModelManager().createModeledEntity(entity);

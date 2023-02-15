@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Monster;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.inventory.PrepareItemCraftEvent;
@@ -47,18 +48,20 @@ public class ProtectingFigure extends PlaceableItem{
 					if (isItemEntity(e)) {
 						//Knockback
 						for (Entity entity : e.getNearbyEntities(10, 10, 10)) {
-							if (e.getVehicle() != entity && entity.getLocation().distanceSquared(e.getLocation()) < 100) {
+							if (e.getVehicle() != entity && entity instanceof Monster && entity.getLocation().distanceSquared(e.getLocation()) < 100){
 								Vector dir = entity.getLocation().subtract(e.getLocation()).toVector();
 								if (dir.lengthSquared() != 0) {
 									dir.normalize();
 								}
-								entity.setVelocity(dir);
+								if (Math.random() < 0.2){
+									entity.setVelocity(dir);
+								}
 							}
 						}
 					}
 				}
 			}
-		}, 1L, 1L); 
+		}, 5L, 5L);
 	}
 	
 	@Override

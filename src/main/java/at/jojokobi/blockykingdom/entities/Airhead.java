@@ -63,11 +63,11 @@ public class Airhead extends CustomEntity<Skeleton> implements Attacker, Targete
 	public Airhead(Location place, EntityHandler handler) {
 		super(place, handler, null);
 		setDespawnTicks(10000);
-		loot.addItem(new LootItem(1, ItemHandler.getCustomItem(Sunglasses.class).createItem(), 1, 1));
-		loot.addItem(new LootItem(1, ItemHandler.getCustomItem(FrozenLightning.class).createItem(), 1, 2));
-		loot.addItem(new LootItem(0.5, ItemHandler.getCustomItem(Cloud.class).createItem(), 1, 3));
-		loot.addItem(new LootItem(1, ItemHandler.getCustomItem(CloudParticle.class).createItem(), 5, 15));
-		loot.addItem(new LootItem(1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Money.IDENTIFIER), 5, 15));
+		loot.addItem(new LootItem(0.1, ItemHandler.getCustomItem(Sunglasses.class).createItem(), 1, 1));
+		loot.addItem(new LootItem(0.1, ItemHandler.getCustomItem(FrozenLightning.class).createItem(), 1, 2));
+		loot.addItem(new LootItem(0.1, ItemHandler.getCustomItem(Cloud.class).createItem(), 1, 3));
+		loot.addItem(new LootItem(0.1, ItemHandler.getCustomItem(CloudParticle.class).createItem(), 1, 5));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, Money.IDENTIFIER), 0, 15));
 		
 		addComponent(new LootComponent(loot, 200));
 		addComponent(new BossBarComponent("Air Head", BarColor.BLUE, BarStyle.SEGMENTED_20));
@@ -105,7 +105,8 @@ public class Airhead extends CustomEntity<Skeleton> implements Attacker, Targete
 		skeleton.getEquipment().setHelmetDropChance(0);
 		skeleton.getEquipment().setItemInMainHand(ItemHandler.getCustomItem(Cloud.class).createItem());
 		skeleton.getEquipment().setItemInOffHand(ItemHandler.getCustomItem(Cloud.class).createItem());
-		
+		skeleton.getEquipment().setItemInMainHandDropChance(0.1f);
+		skeleton.getEquipment().setItemInOffHandDropChance(0.1f);
 		NMSEntityUtil.clearGoals(skeleton);
 
 		

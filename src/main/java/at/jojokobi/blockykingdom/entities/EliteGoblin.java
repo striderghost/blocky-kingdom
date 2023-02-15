@@ -1,6 +1,7 @@
 package at.jojokobi.blockykingdom.entities;
 
 import java.util.HashMap;
+import java.util.Random;
 import java.lang.annotation.Target;
 import at.jojokobi.mcutil.entity.*;
 import at.jojokobi.mcutil.locatables.EntityLocatable;
@@ -65,10 +66,10 @@ public class EliteGoblin extends CustomEntity<Zombie> implements Attacker{
 		setDespawnTicks(5000);
 		
 		LootInventory loot = new LootInventory ();
-		loot.addItem(new LootItem(0.7, ItemHandler.getItemStack(GoblinSkin.class), 1, 2));
+		loot.addItem(new LootItem(0.1, ItemHandler.getItemStack(GoblinSkin.class), 1, 2));
 		loot.addItem(new LootItem(0.05, ItemHandler.getItemStack(GoblinFang.class), 1, 1));
 		
-		addComponent(new LootComponent(loot, 0));
+		addComponent(new LootComponent(loot, 10));
 		addComponent(new HealthComponent(new RealHealthAccessor()));
 
 		addEntityTask(new AttackTask(Player.class));
@@ -100,8 +101,11 @@ public class EliteGoblin extends CustomEntity<Zombie> implements Attacker{
 		entity.getEquipment().setHelmetDropChance(0);
 		entity.getEquipment().setItemInMainHandDropChance(1);
 		ItemStack knife = ItemHandler.getItemStack(GoblinKnife.class);
-		ItemHandler.getCustomItem(GoblinKnife.class).setDurability(knife, 0);
+		ItemHandler.getCustomItem(GoblinKnife.class).setDurability(knife, new Random().nextInt((200 - 20) + 1) + 20);
 		entity.getEquipment().setItemInMainHand(knife);
+		entity.getEquipment().setItemInMainHandDropChance(0.1f);
+		entity.getEquipment().setItemInOffHandDropChance(0.1f);
+
 		entity.setLootTable(null);
 		//entity.setCustomName("EliteGoblin");
 		//entity.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 1000000, 1, true, false));
