@@ -368,6 +368,9 @@ public class BlockyKingdomPlugin extends JavaPlugin implements Listener{
 		
 		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (Goblin.GOBLIN_SPAWN_KEY, l -> new Goblin(l, null)));
 		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (GoblinBoss.GOBLIN_BOSS_SPAWN_KEY, l -> new GoblinBoss(l, null)));
+		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (Slimerer.SLIMERER_SPAWN_KEY, l -> new Slimerer(l, null)));
+		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (Airhead.AIRHEAD_SPAWN_KEY, l -> new Airhead(l, null)));
+		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (Ghost.GHOST_SPAWN_KEY, l -> new Ghost(l, null)));
 		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn (EliteGoblin.ELITE_GOBLIN_SPAWN_KEY, l -> new EliteGoblin(l, null)));
 		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn(StoneBeetle.STONE_BEETLE_KEY, l -> new StoneBeetle(l, null)));
 		CustomSpawnsHandler.getInstance().addItem(new FunctionSpawn(DeathAngel.DEATH_ANGEL_KEY, l -> new DeathAngel(l, null)));

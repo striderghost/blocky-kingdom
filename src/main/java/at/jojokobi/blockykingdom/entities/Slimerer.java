@@ -3,6 +3,7 @@ package at.jojokobi.blockykingdom.entities;
 import java.util.HashMap;
 import java.util.Map;
 
+import at.jojokobi.mcutil.NamespacedEntry;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -48,6 +49,8 @@ import at.jojokobi.mcutil.loot.LootItem;
 
 public class Slimerer extends CustomEntity<ArmorStand> implements Attacker, Targeter {
 
+	public static final NamespacedEntry SLIMERER_SPAWN_KEY = new NamespacedEntry(
+			BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, "slimerer");
 	private int attackState = 0;
 	private HealthAccessor health;
 

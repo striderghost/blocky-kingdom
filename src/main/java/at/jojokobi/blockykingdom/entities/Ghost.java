@@ -6,6 +6,7 @@ import java.util.Map;
 //import com.ticxo.modelengine.api.model.ModeledEntity;
 //import com.ticxo.modelengine.api.model.ActiveModel;
 //import com.ticxo.modelengine.api.ModelEngineAPI;
+import at.jojokobi.mcutil.NamespacedEntry;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -37,6 +38,8 @@ import at.jojokobi.mcutil.loot.LootItem;
 public class Ghost extends CustomEntity<Skeleton> implements Attacker{
 	//public ModeledEntity ghostentity;
 	//public ActiveModel ghostmodel;
+	public static final NamespacedEntry GHOST_SPAWN_KEY = new NamespacedEntry(
+			BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, "ghost");
 
 	public Ghost(Location place, EntityHandler handler) {
 		super(place, handler, GhostType.getInstance());

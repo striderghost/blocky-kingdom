@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import at.jojokobi.mcutil.NamespacedEntry;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
@@ -50,14 +51,13 @@ import at.jojokobi.mcutil.loot.LootItem;
 public class Airhead extends CustomEntity<Skeleton> implements Attacker, Targeter{
 	
 //	private static final int MAX_ATTACK_STATE = 5;
-	
+public static final NamespacedEntry AIRHEAD_SPAWN_KEY = new NamespacedEntry(BlockyKingdomPlugin.BLOCKY_KINGDOM_NAMESPACE, "airhead");
 	private static final int SPAWN_DEATH_ANGELS = 1;
 	private static final int SHOOT_THUNDER = 2;
 	private static final int SHOOT_WIND = 4;
-	
+
 	private final LootInventory loot = new LootInventory();
-	
-	
+
 	private int attackState = 0;
 	
 	public Airhead(Location place, EntityHandler handler) {
